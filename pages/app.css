@@ -1,0 +1,119 @@
+:root {
+  color-scheme: light;
+  --bg: #f3ecdf;
+  --surface: #faf6ef;
+  --ink: #1f1a14;
+  --muted: #6e6458;
+  --line: #e0d4c3;
+  --accent: #6e2f2a;
+  --accent-fg: #faf6ef;
+  font-family: Literata, Palatino, serif;
+  background: var(--bg);
+  color: var(--ink);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-image: radial-gradient(1100px 420px at 50% -120px, rgb(250 246 239 / 0.95), transparent 70%);
+}
+
+main {
+  width: min(40rem, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: 2.5rem 0 4rem;
+}
+
+header { text-align: center; }
+.kicker { margin: 0; color: var(--muted); }
+img { height: 15rem; width: auto; }
+h1 {
+  margin: 0.25rem 0 0;
+  font-family: Fraunces, Palatino, serif;
+  font-weight: 500;
+  font-size: clamp(2.4rem, 6vw, 3.2rem);
+}
+.lead { margin: 0.35rem 0 0; color: var(--muted); font-size: 1.15rem; }
+
+form, section {
+  margin-top: 2rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 1.25rem;
+  box-shadow: 0 1px 0 rgb(31 26 20 / 0.04), 0 16px 40px rgb(31 26 20 / 0.05);
+  padding: 1.1rem 1.15rem 1.25rem;
+}
+
+textarea {
+  width: 100%;
+  min-height: 5rem;
+  border: 0;
+  resize: vertical;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-size: 1.15rem;
+}
+
+textarea:focus { outline: none; }
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.chips { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+
+button {
+  min-height: 2.75rem;
+  border-radius: 999px;
+  border: 0;
+  font: inherit;
+  cursor: pointer;
+}
+
+button:disabled { cursor: default; opacity: 0.55; }
+
+.chips button { background: var(--bg); color: var(--ink); padding: 0 0.85rem; }
+
+button[type="submit"] {
+  background: var(--accent);
+  color: var(--accent-fg);
+  padding: 0 1.15rem;
+}
+
+.status, .muted { color: var(--muted); }
+.status:empty { display: none; }
+
+ol { list-style: none; margin: 0; padding: 0; }
+li + li { margin-top: 1.15rem; padding-top: 1.15rem; border-top: 1px solid var(--line); }
+.ref {
+  margin: 0;
+  color: var(--accent);
+  font-family: Fraunces, Palatino, serif;
+  font-size: 0.95rem;
+}
+li p:last-child { margin: 0.3rem 0 0; font-size: 1.15rem; line-height: 1.45; }
+
+h2 {
+  margin: 0 0 1rem;
+  font-family: Fraunces, Palatino, serif;
+  font-weight: 500;
+  font-size: 1.05rem;
+  color: var(--accent);
+}
+
+.sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }

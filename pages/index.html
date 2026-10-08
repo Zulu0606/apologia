@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Apologia</title>
+    <meta
+      name="description"
+      content="Apologia answers a question with related verses from the World English Bible."
+    />
+    <link rel="icon" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;1,7..72,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/app.css" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <p class="kicker">Apologia</p>
+        <img src="/bobby-the-bible.png" alt="" width="1144" height="1406" />
+        <h1>Bobby the Bible</h1>
+        <p class="lead">What does the Bible say?</p>
+      </header>
+      <form>
+        <label class="sr" for="question">Your question</label>
+        <textarea
+          id="question"
+          rows="2"
+          maxlength="400"
+          placeholder="What does the Bible say about suffering?"
+        ></textarea>
+        <div class="row">
+          <div class="chips">
+            <button type="button" data-q="Why do we suffer?">Why we suffer</button>
+            <button type="button" data-q="How can I forgive?">How to forgive</button>
+            <button type="button" data-q="I am afraid">I am afraid</button>
+          </div>
+          <button type="submit" disabled>Ask</button>
+        </div>
+        <p class="status" data-status>Opening the Bible…</p>
+      </form>
+      <section id="answer" data-answer></section>
+    </main>
+    <script src="/app.js"></script>
+  </body>
+</html>
